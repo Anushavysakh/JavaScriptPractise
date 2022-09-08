@@ -1,13 +1,11 @@
 const prompt = require("prompt-sync")();
-let number = prompt("Enter the range : ");
-let n = Math.pow(2,number);
-let result = 1;
+let number = prompt('Enter a number :');
 
-for (let index = 1; index <= n; index++) {
-    if(result <= n) {
-        result *= 2;
-        console.log("2 ^ " + index + " = " + result);
-    } else {
-        break;
-    }
+let n = Math.pow(2, number);
+let result = 1;
+let i = 1;
+while( (i <= n) && (result <= n) && (result < 256)){
+    result *= 2;
+    console.log("2 ^ " + i + " = " + result);
+    i++ ;
 }
